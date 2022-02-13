@@ -1,0 +1,18 @@
+Feature: login to saucedemo
+
+  Scenario: verify login with valid credentials
+    Given :user navigate to url
+    Then  :user should enter username and password
+    And   :user should click on login button
+    Then  :user should navigate to product page
+    When  :user add an item to ADD TO CART
+    And   :user should click on ADD TO CART button
+    Then  :user should click on cart icon
+    Then  :user should click on checkout button
+    When  :user should enter Firstname,Lastname and postcode
+    Then  :user should click on continue button
+    And   :user should see all items in the cart
+    And   :user should click on finish button
+    And   :user should  checkout
+    Then  :user should click on menu button
+    Then  :user should logout successfully
